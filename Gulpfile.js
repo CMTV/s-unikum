@@ -52,9 +52,9 @@ task('move_files', () =>
     return src(
         [
             'src/**/*',
-            '!site/**/_*/',
-            '!site/**/_*/**/*',
-            '!site/**/_*'
+            '!src/**/_*/',
+            '!src/**/_*/**/*',
+            '!src/**/_*'
         ], { nodir: true }
     ).pipe(dest('out'));
 });

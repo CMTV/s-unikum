@@ -9,7 +9,7 @@ const clean_css =   require('gulp-clean-css');
 const uglify_js =   require('gulp-uglify');
 const babel =       require('gulp-babel');
 
-// ===
+// ====
 
 task('clear', done =>
 {

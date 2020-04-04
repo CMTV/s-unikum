@@ -9,7 +9,7 @@ const clean_css =   require('gulp-clean-css');
 const uglify_js =   require('gulp-uglify');
 const babel =       require('gulp-babel');
 
-// ====
+// ===
 
 task('clear', done =>
 {
@@ -23,6 +23,9 @@ task('build_htmls', done =>
 
     // Index
     genHtml('src/_layout/index.pug', 'out/index.html', { });
+
+    // CNAME
+    require('fs').writeFileSync('out/CNAME', 's-unikum.ru');
 
     done();
 });

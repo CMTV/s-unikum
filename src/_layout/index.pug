@@ -1,0 +1,117 @@
+mixin mainSection(name, icon, title)
+    section.main-section(class=`main-section--${name}`)
+        hr.section-sep
+        h2
+            .i-container
+                i(class=icon)
+            span!=title
+        block
+
+doctype html
+html(lang="ru")
+
+    head
+        title УникУм — Образовательный центр
+        meta(name="description", content="sd")
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        link(rel="stylesheet", href="style.min.css")
+
+        // Font Awesome
+        link(rel="stylesheet", href="libs/font-awesome/css/all.min.css")
+
+        // jQuery
+        script(src="libs/jquery.min.js")
+
+        // Slick
+        link(rel="stylesheet", href="libs/slick/slick.css")
+        link(rel="stylesheet", href="libs/slick/slick-theme.css")
+        script(src="libs/slick/slick.min.js")
+
+        // Reviews
+        script(src="scripts/reviews.js")
+
+    body
+        header
+            h1
+                a(href="/") <span>Уник</span><span>Ум</span>
+
+            p.site-desc Образовательный центр<br>в Североморске
+
+            p.site-desc Готовим к <strong>ЕГЭ</strong> и <strong>ОГЭ</strong> по
+
+
+            p.site-desc.directions Математике <span>|</span> Физике <span>|</span> Информатике
+
+            .contact-container
+                a.contact-block.contact-block--mail(href="mailto:newpetya@inbox.ru")
+                    i.fas.fa-envelope-open-text
+                    span newpetya@inbox.ru
+                
+                a.contact-block.contact-block--phone(href="tel:+79039616466")
+                    i.fas.fa-phone-volume
+                    span +7 (903) 961 64 66
+
+        +mainSection('price', 'fas fa-ruble-sign', 'Стоимость')
+            .price-block
+                .info
+                    i.info-icon.fas.fa-user
+                    .info-container
+                        .info-title Индивидуальное занятие
+                        .info-bar
+                            i.far.fa-clock
+                            span 1 а.ч. (45 минут)
+
+                .price 1 000 руб
+            
+            .price-block.group
+                .info
+                    i.info-icon.fas.fa-users
+                    .info-container
+                        .info-title Групповое занятие
+                        .info-bar
+                            i.far.fa-clock
+                            span 1 а.ч. (45 минут)
+
+            .group-prices
+                .group-price
+                    div 2 ученика
+                    div 900 рублей
+                
+                .group-price
+                    div 3 ученика
+                    div 800 рублей
+                
+                .group-price
+                    div 4 ученика
+                    div 700 рублей
+                
+                .group-price
+                    div 5 ученика
+                    div 600 рублей
+                
+                .group-price
+                    div 5+ учеников
+                    div 500 рублей
+
+        +mainSection('reviews', 'fas fa-comments', 'Отзывы')
+            .reviews-container
+
+                .review
+                    .review-name Радько Петр
+                    .review-content Задача организации, в особенности же реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт сложившаяся структура организации играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что сложившаяся структура организации требуют от нас анализа новых предложений.
+
+                .review
+                    .review-name Николай Нагибин
+                    .review-content Не следует, однако забывать, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки форм развития. Не следует, однако забывать, что укрепление и развитие структуры требуют определения и уточнения форм развития. С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требуют от нас анализа систем массового участия. С другой стороны сложившаяся структура организации влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+
+                .review
+                    .review-name Лолкек Пепепович
+                    .review-content Таким образом укрепление и развитие структуры представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки соответствующий условий активизации.
+
+
+        +mainSection('location', 'fas fa-map-marked-alt', 'Адрес')
+            .map-responsive
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2075.2879076250515!2d33.4283960895097!3d69.06379679881259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44341831de5befdd%3A0xc9b357a036a0474f!2z0YPQuy4g0KHQtdCy0LXRgNC90LDRjyDQt9Cw0YHRgtCw0LLQsCwgNCwg0KHQtdCy0LXRgNC-0LzQvtGA0YHQuiwg0JzRg9GA0LzQsNC90YHQutCw0Y8g0L7QsdC7LiwgMTg0NjA2!5e0!3m2!1sru!2sru!4v1585835021160!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
